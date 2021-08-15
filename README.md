@@ -29,3 +29,8 @@ Instance entering state pending.
 Please wait...
 Instance state successfully changed to running.
 ```
+
+Might be handy to add an alias to your .zshrc or .bash_profile for easy access.
+```
+alias ec2='local cdir=$PWD && cd /Users/username/Documents/nodejs/ec2-manager/ && node . && cd $cdir && unset cdir'
+```
