@@ -39,7 +39,11 @@ async function main(){
 		validate: input => parseInt(input) >= 0 && parseInt(input) <= instances.length - 1 ? true : 'Invalid instance number.'
 	});
 	
-	var selected = instances[+selection.selected];
+	var cancel = () => {
+		console.log(`Thank you for using EC2 manager.`); 
+		process.exit(0);
+	};
+	var selected = instances[+selection.selected] ?? cancel(); 
 	
 	console.log(`Selected ${selected.Tags.find(x => x.Key == 'Name').Value} (${selected.InstanceId}).`);
 	
@@ -93,5 +97,10 @@ async function main(){
 	
 	main();
 }
+
+process.on('SIGINT', () => {
+	console.log(`Thank you for using EC2 manager.`);
+	process.exit(0);
+});
 
 main();
