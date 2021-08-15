@@ -1,8 +1,7 @@
 # AWS EC2 Manager
 ### A simple tool to start and stop your instances from the command line.
 
-**Setup**
-Setup is simple, just clone the repo, run `npm install` in the project directory and then create your .env file.
+**Setup** is simple, just clone the repo, run `npm install` in the project directory and then create your .env file.
 
 The .env file should look like this
 ```
