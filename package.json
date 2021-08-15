@@ -1,0 +1,16 @@
+{
+  "name": "ec2-manager",
+  "version": "1.0.0",
+  "description": "An easy command line tool for toggling the status of AWS EC2 instances.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Scott",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.968.0",
+    "dotenv": "^10.0.0",
+    "prompts": "^2.4.1"
+  }
+}
